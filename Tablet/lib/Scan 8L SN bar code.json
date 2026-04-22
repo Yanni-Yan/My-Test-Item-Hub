@@ -1,0 +1,190 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Keyin 8L Serial Number(2508CE123518)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_KeyIn.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Subcommand",
+          "ArgumentValue": "01:String Tye"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Default value",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Form Title",
+          "ArgumentValue": "Please Scan 8L S/N"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Input Font Size",
+          "ArgumentValue": "12"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Caption String",
+          "ArgumentValue": "Please scan 8L S/N example: XXXXCEXXXXXX"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Change Format",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Len Match(1)",
+          "ArgumentValue": "1:12"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": ""
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 47,
+          "VariableName": "8L_SN",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7A589"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 48,
+          "VariableName": "BarCodeASC",
+          "Process": "=Str2Asc(Var_8L_SN)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-ADE9F"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 49,
+          "VariableName": "sn_year",
+          "Process": "=substr(var_8L_SN,1:2)",
+          "Min": "25",
+          "Max": "50",
+          "ErrorCode": "E-1C3F9"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 50,
+          "VariableName": "sn_week",
+          "Process": "=substr(var_8L_SN,3:4)",
+          "Min": "1",
+          "Max": "53",
+          "ErrorCode": "E-CDBCC"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 51,
+          "VariableName": "sn_loc",
+          "Process": "=hex2dec(str2asc(substr(var_8L_SN,5)))",
+          "Min": "48",
+          "Max": "90",
+          "ErrorCode": "E-82E05"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 52,
+          "VariableName": "Barcode_DUT_length",
+          "Process": "=length(var_8L_SN)",
+          "Min": "12",
+          "Max": "",
+          "ErrorCode": "E-36171"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Show 8L_SN",
+      "Command": "Show Text",
+      "Subcommand": "",
+      "CommandParameters": "='8L_SN: '+var_8L_SN",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Color",
+          "ArgumentValue": "FFFF00"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Size",
+          "ArgumentValue": "24"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Scan Barcode_SN",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

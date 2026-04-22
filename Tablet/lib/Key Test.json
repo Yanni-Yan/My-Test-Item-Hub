@@ -1,0 +1,1719 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Buffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Nickname",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "65: Purge Rx Buffer"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 20,
+          "WaitInterval": 200,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Hide all shape",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "ShowShape"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Index",
+              "ArgumentValue": "-1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Show",
+              "ArgumentValue": "0"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Hide Shape Group 2",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "ShowShapeByGroup"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Group",
+              "ArgumentValue": "2"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "JustGetNumber",
+              "ArgumentValue": "0"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Load Background",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "LoadBackgroundImage"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "File name",
+              "ArgumentValue": "=$testplanpath+Var_8L_PN+'.BMP'"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Show Vision Window",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "ShowWindow"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "nCmdShow",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "L1",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Count=0 initial counter about reading times",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "Count",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-6A2F5"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Hide all shape",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "ShowShape"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Index",
+          "ArgumentValue": "-1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Show",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Clear Buffer",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Nickname",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "65: Purge Rx Buffer"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "hide group Make group",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "ShowShapeByGroup"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Group",
+          "ArgumentValue": "2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "JustGetNumber",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "1start",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "initial Variable",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 96,
+          "VariableName": "STDKeyDownNo",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-88E82"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 97,
+          "VariableName": "TotalKeyDownNo",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-9A458"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "Count",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-6A2F5"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 98,
+          "VariableName": "Short",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-0C430"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read Buffer",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "55: Read Data By Length"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "11"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TimeOut(ms)",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 99,
+          "VariableName": "BufRead",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-B2938"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 50,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "2start",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "KeyType",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 100,
+              "VariableName": "KeyType",
+              "Process": "=substr(var_BufRead,1:2)",
+              "Min": "01",
+              "Max": "",
+              "ErrorCode": "E-699A2"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "2start",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Check Key Type",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "STD Key Release?",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 101,
+                  "VariableName": "BufRead1",
+                  "Process": "=substr(var_BufRead,3:22)",
+                  "Min": "00000000000000000000",
+                  "Max": "",
+                  "ErrorCode": "E-44FCA"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": true,
+              "FailJumpLabel": "Show STD Key Down",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": true,
+              "GotoLabel": "Check STD Key up",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "Chk STD Release?",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestGroup, UTS2.0",
+              "Name": "",
+              "Children": [
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Ctrl == 00?",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 102,
+                      "VariableName": "Special_Key",
+                      "Process": "=substr(var_BufRead,3:4)",
+                      "Min": "00",
+                      "Max": "",
+                      "ErrorCode": "E-9FD6E"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "CtrlKeyPressed",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "Normal Key",
+                  "Label": "",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "B1(Specail Key)",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 103,
+                      "VariableName": "STDKeyDown",
+                      "Process": "=substr(var_BufRead,3:4)+'00'",
+                      "Min": "0000",
+                      "Max": "",
+                      "ErrorCode": "E-64F4D"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "Call Show Make Shape1",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "Normal Key",
+                  "Label": "CtrlKeyPressed",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Call Show STD Make Shape",
+                  "Command": "Function",
+                  "Subcommand": "Call",
+                  "CommandParameters": "Show STD Make Shape",
+                  "Arguments": [],
+                  "ResultVariables": [],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": false,
+                  "FailJumpLabel": "",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": false,
+                  "GotoLabel": "",
+                  "Label": "Call Show Make Shape1",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                }
+              ],
+              "Label": "Ctrl Key",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestGroup, UTS2.0",
+              "Name": "",
+              "Children": [
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Normal == 00?",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 102,
+                      "VariableName": "Special_Key",
+                      "Process": "=substr(var_BufRead,5:6)",
+                      "Min": "00",
+                      "Max": "",
+                      "ErrorCode": "E-9FD6E"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "Normal analysis",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "Normal Key2",
+                  "Label": "",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "B2(STD Key2)",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 103,
+                      "VariableName": "STDKeyDown",
+                      "Process": "='00'+substr(var_BufRead,5:6)",
+                      "Min": "0000",
+                      "Max": "",
+                      "ErrorCode": "E-64F4D"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "Call Show Make Shape2",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "Normal Key2",
+                  "Label": "Normal analysis",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Call Show STD Make Shape",
+                  "Command": "Function",
+                  "Subcommand": "Call",
+                  "CommandParameters": "Show STD Make Shape",
+                  "Arguments": [],
+                  "ResultVariables": [],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": false,
+                  "FailJumpLabel": "",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": false,
+                  "GotoLabel": "",
+                  "Label": "Call Show Make Shape2",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                }
+              ],
+              "Label": "Normal Key",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestGroup, UTS2.0",
+              "Name": "",
+              "Children": [
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Media Key1",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 103,
+                      "VariableName": "STDKeyDown",
+                      "Process": "='00'+substr(var_BufRead,17:18)+'00'",
+                      "Min": "000000",
+                      "Max": "",
+                      "ErrorCode": "E-64F4D"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "Call Show Make Shape3",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "M2",
+                  "Label": "M1",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Call Show STD Make Shape",
+                  "Command": "Function",
+                  "Subcommand": "Call",
+                  "CommandParameters": "Show STD Make Shape",
+                  "Arguments": [],
+                  "ResultVariables": [],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": false,
+                  "FailJumpLabel": "",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": false,
+                  "GotoLabel": "",
+                  "Label": "Call Show Make Shape3",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Media Key2",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 103,
+                      "VariableName": "STDKeyDown",
+                      "Process": "='0000'+substr(var_BufRead,19:20)",
+                      "Min": "000000",
+                      "Max": "",
+                      "ErrorCode": "E-64F4D"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "Call Show Make Shape4",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "M3",
+                  "Label": "M2",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Call Show STD Make Shape",
+                  "Command": "Function",
+                  "Subcommand": "Call",
+                  "CommandParameters": "Show STD Make Shape",
+                  "Arguments": [],
+                  "ResultVariables": [],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": false,
+                  "FailJumpLabel": "",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": false,
+                  "GotoLabel": "",
+                  "Label": "Call Show Make Shape4",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Media Key3",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 103,
+                      "VariableName": "STDKeyDown",
+                      "Process": "='000'+substr(var_BufRead,21:22)",
+                      "Min": "00000",
+                      "Max": "",
+                      "ErrorCode": "E-64F4D"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "Call Show Make Shape5",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "Chek Keydown Number",
+                  "Label": "M3",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Call Show STD Make Shape",
+                  "Command": "Function",
+                  "Subcommand": "Call",
+                  "CommandParameters": "Show STD Make Shape",
+                  "Arguments": [],
+                  "ResultVariables": [],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": false,
+                  "FailJumpLabel": "",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": false,
+                  "GotoLabel": "",
+                  "Label": "Call Show Make Shape5",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                }
+              ],
+              "Label": "Normal Key2",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestGroup, UTS2.0",
+              "Name": "",
+              "Children": [
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Short==0(If short just go back to got next report)",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 98,
+                      "VariableName": "Short",
+                      "Process": "",
+                      "Min": "0",
+                      "Max": "",
+                      "ErrorCode": "E-0C430"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "2start",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": false,
+                  "GotoLabel": "",
+                  "Label": "",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Total Key Down Number == 1",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 97,
+                      "VariableName": "TotalKeyDownNo",
+                      "Process": "=var_STDKeyDownNo",
+                      "Min": "1",
+                      "Max": "",
+                      "ErrorCode": "E-9A458"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": true,
+                  "FailJumpLabel": "2 more key press",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "2start",
+                  "Label": "",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                },
+                {
+                  "$id": "0",
+                  "$type": "UTS2._0.TestItem, UTS2.0",
+                  "Name": "Set short = how many keys down number",
+                  "Command": "Variable Assign",
+                  "Subcommand": "",
+                  "CommandParameters": "",
+                  "Arguments": [],
+                  "ResultVariables": [
+                    {
+                      "$id": "0",
+                      "IsShowingInPis": true,
+                      "PisIndex": 98,
+                      "VariableName": "Short",
+                      "Process": "=var_TotalKeyDownNo",
+                      "Min": "",
+                      "Max": "",
+                      "ErrorCode": "E-0C430"
+                    }
+                  ],
+                  "FailRetryEnabled": false,
+                  "RetryCount": 0,
+                  "WaitInterval": 0,
+                  "FailJumpEnabled": false,
+                  "FailJumpLabel": "",
+                  "LoopEnabled": false,
+                  "LoopLabel": "",
+                  "LoopCount": 0,
+                  "IfEnabled": false,
+                  "IfJumpLabel": "",
+                  "IfConditions": [],
+                  "IfLogic": 0,
+                  "GotoEnabled": true,
+                  "GotoLabel": "2start",
+                  "Label": "2 more key press",
+                  "Description": "",
+                  "Status": 0,
+                  "BackupStatus": 0,
+                  "Parent": {
+                    "$ref": "0"
+                  },
+                  "Section": 1
+                }
+              ],
+              "Label": "Chek Keydown Number",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "Show STD Key Down",
+          "Description": "Loop show key down shape",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "STD KEY Process",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Short==0(If short just go back to got next report)",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 98,
+              "VariableName": "Short",
+              "Process": "",
+              "Min": "0",
+              "Max": "",
+              "ErrorCode": "E-0C430"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "1start",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "TotalKeyDownNo == 1",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 97,
+              "VariableName": "TotalKeyDownNo",
+              "Process": "",
+              "Min": "1",
+              "Max": "",
+              "ErrorCode": "E-9A458"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "1start",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Show release shape by ID",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "ShowShapeByID"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "ShapeID",
+              "ArgumentValue": "=var_LastKEYReport"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "show",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "hide all Make shape",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "ShowShapeByGroup"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Group",
+              "ArgumentValue": "2"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "JustGetNumber",
+              "ArgumentValue": "0"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": true,
+          "GotoLabel": "GetShowShapeNumber",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Check STD Key up",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "GetShowShapeNumber",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "ShowShapeByGroup"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Group",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "JustGetNumber",
+          "ArgumentValue": "-1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 104,
+          "VariableName": "Keynumber",
+          "Process": "",
+          "Min": "78",
+          "Max": "",
+          "ErrorCode": "E-BF33D"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "1start",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "GetShowShapeNumber",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Picture",
+          "Command": "Picture",
+          "Subcommand": "Clear",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Hide form",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS2_Drawing_cs.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "ShowWindow"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "nCmdShow",
+              "ArgumentValue": "0"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Hid",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "KEY Test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

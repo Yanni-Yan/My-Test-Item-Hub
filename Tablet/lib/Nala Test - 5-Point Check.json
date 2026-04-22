@@ -1,0 +1,1991 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "FP_Test++ <= 3 (Retest 5-Points)",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 110,
+          "VariableName": "FP_Test",
+          "Process": "=numcal(var_FP_Test+1)",
+          "Min": "0",
+          "Max": "3",
+          "ErrorCode": "E-94335"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Clear Buffer",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Nickname",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "65: Purge Rx Buffer"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "Clear",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 200ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "200",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Clear Buffer",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Nickname",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "65: Purge Rx Buffer"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 500ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "500",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "Start",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Y22 (Middle Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':03050512FF00E2'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "SET_Y22",
+          "Process": "",
+          "Min": ":03050512FF00E2",
+          "Max": "",
+          "ErrorCode": "E-A246A"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read data - 5-Points (Finger 1)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "55: Read Data By Length"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "24"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TimeOut(ms)",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 111,
+          "VariableName": "TP_5Points",
+          "Process": "",
+          "Min": "03XXXXXXX3XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "Max": "",
+          "ErrorCode": "E-20D97"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 100,
+      "WaitInterval": 5,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "5P_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Y04 (Right up Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':03050504FF00F0'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "SET_Y4",
+          "Process": "",
+          "Min": ":03050504FF00F0",
+          "Max": "",
+          "ErrorCode": "E-4D705"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read data - 5-Points (Finger 2)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "55: Read Data By Length"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "24"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TimeOut(ms)",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 111,
+          "VariableName": "TP_5Points",
+          "Process": "",
+          "Min": "03XXXXXXX3XXXXXXX7XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "Max": "",
+          "ErrorCode": "E-20D97"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 300,
+      "WaitInterval": 5,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "5P_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Y20 (Left up Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':03050510FF00E4'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "SET_Y20",
+          "Process": "",
+          "Min": ":03050510FF00E4",
+          "Max": "",
+          "ErrorCode": "E-E7101"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read data - 5-Points (Finger 3)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "55: Read Data By Length"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "24"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TimeOut(ms)",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 111,
+          "VariableName": "TP_5Points",
+          "Process": "",
+          "Min": "03XXXXXXX3XXXXXXX7XXXXXXXBXXXXXXXXXXXXXXXXXXXXXX",
+          "Max": "",
+          "ErrorCode": "E-20D97"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 300,
+      "WaitInterval": 5,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "5P_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Y05 (Right down Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':03050505FF00EF'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "SET_Y5",
+          "Process": "",
+          "Min": ":03050505FF00EF",
+          "Max": "",
+          "ErrorCode": "E-F329A"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read data - 5-Points (Finger 4)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "55: Read Data By Length"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "24"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TimeOut(ms)",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 111,
+          "VariableName": "TP_5Points",
+          "Process": "",
+          "Min": "03XXXXXXX3XXXXXXX7XXXXXXXBXXXXXXXFXXXXXXXXXXXXXX",
+          "Max": "",
+          "ErrorCode": "E-20D97"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 300,
+      "WaitInterval": 5,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "5P_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Y21 (Left down Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':03050511FF00E3'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "SET_Y21",
+          "Process": "",
+          "Min": ":03050511FF00E3",
+          "Max": "",
+          "ErrorCode": "E-92BDA"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read data - 5-Points (Finger 5)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "55: Read Data By Length"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "24"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TimeOut(ms)",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 111,
+          "VariableName": "TP_5Points",
+          "Process": "",
+          "Min": "03XXXXXXX3XXXXXXX7XXXXXXXBXXXXXXXFXXXXXXX3XXXXXX",
+          "Max": "",
+          "ErrorCode": "E-20D97"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 300,
+      "WaitInterval": 5,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "5P_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "X1 Y1 X2 Y2 X3 Y3 X4 Y4 X5 Y5",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 112,
+          "VariableName": "X1",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,14:210)+BitSelect(var_TP_5Points,11:3210)+BitSelect(var_TP_5Points,12:3210)+BitSelect(var_TP_5Points,9:32))",
+          "Min": "900",
+          "Max": "1150",
+          "ErrorCode": "E-81E5F"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 113,
+          "VariableName": "Y1",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,15:3210)+BitSelect(var_TP_5Points,16:3210)+BitSelect(var_TP_5Points,13:3210)+BitSelect(var_TP_5Points,14:3))",
+          "Min": "450",
+          "Max": "650",
+          "ErrorCode": "E-DD7E9"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 114,
+          "VariableName": "X2",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,22:210)+BitSelect(var_TP_5Points,19:3210)+BitSelect(var_TP_5Points,20:3210)+BitSelect(var_TP_5Points,17:32))",
+          "Min": "200",
+          "Max": "400",
+          "ErrorCode": "E-E627B"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 115,
+          "VariableName": "Y2",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,23:3210)+BitSelect(var_TP_5Points,24:3210)+BitSelect(var_TP_5Points,21:3210)+BitSelect(var_TP_5Points,22:3))",
+          "Min": "50",
+          "Max": "250",
+          "ErrorCode": "E-BD261"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 116,
+          "VariableName": "X3",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,30:210)+BitSelect(var_TP_5Points,27:3210)+BitSelect(var_TP_5Points,28:3210)+BitSelect(var_TP_5Points,25:32))",
+          "Min": "1650",
+          "Max": "1850",
+          "ErrorCode": "E-F5CC6"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 117,
+          "VariableName": "Y3",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,31:3210)+BitSelect(var_TP_5Points,32:3210)+BitSelect(var_TP_5Points,29:3210)+BitSelect(var_TP_5Points,30:3))",
+          "Min": "50",
+          "Max": "250",
+          "ErrorCode": "E-5AAAF"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 118,
+          "VariableName": "X4",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,38:210)+BitSelect(var_TP_5Points,35:3210)+BitSelect(var_TP_5Points,36:3210)+BitSelect(var_TP_5Points,33:32))",
+          "Min": "200",
+          "Max": "400",
+          "ErrorCode": "E-B9099"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 119,
+          "VariableName": "Y4",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,39:3210)+BitSelect(var_TP_5Points,40:3210)+BitSelect(var_TP_5Points,37:3210)+BitSelect(var_TP_5Points,38:3))",
+          "Min": "900",
+          "Max": "1100",
+          "ErrorCode": "E-0F146"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 120,
+          "VariableName": "X5",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,46:210)+BitSelect(var_TP_5Points,43:3210)+BitSelect(var_TP_5Points,44:3210)+BitSelect(var_TP_5Points,41:32))",
+          "Min": "1700",
+          "Max": "1900",
+          "ErrorCode": "E-F7323"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 121,
+          "VariableName": "Y5",
+          "Process": "=Bin2Dec(BitSelect(var_TP_5Points,47:3210)+BitSelect(var_TP_5Points,48:3210)+BitSelect(var_TP_5Points,45:3210)+BitSelect(var_TP_5Points,46:3))",
+          "Min": "900",
+          "Max": "1100",
+          "ErrorCode": "E-6A43D"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "5P_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RST Y22 (Middle Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':030505120000E1'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RST_Y22",
+          "Process": "",
+          "Min": ":030505120000E1",
+          "Max": "",
+          "ErrorCode": "E-59A3E"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RST Y04 (Right up Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':030505040000EF'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RST_Y4",
+          "Process": "",
+          "Min": ":030505040000EF",
+          "Max": "",
+          "ErrorCode": "E-60971"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RST Y20 (Left up Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':030505100000E3'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RST_Y20",
+          "Process": "",
+          "Min": ":030505100000E3",
+          "Max": "",
+          "ErrorCode": "E-92B6B"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RST Y05 (Right down Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':030505050000EE'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RST_Y5",
+          "Process": "",
+          "Min": ":030505050000EE",
+          "Max": "",
+          "ErrorCode": "E-1DAF6"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RST Y21 (Left down Button)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':030505110000E2'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RST_Y21",
+          "Process": "",
+          "Min": ":030505110000E2",
+          "Max": "",
+          "ErrorCode": "E-A5F9F"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 500ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "500",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "TRK_Test_BW = 0",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 122,
+          "VariableName": "TRK_Test_BW",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-B6D92"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "Nala Tracking Test_BW",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y22 (Middle Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505120000E1'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y22",
+              "Process": "",
+              "Min": ":030505120000E1",
+              "Max": "",
+              "ErrorCode": "E-59A3E"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y04 (Right up Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505040000EF'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y4",
+              "Process": "",
+              "Min": ":030505040000EF",
+              "Max": "",
+              "ErrorCode": "E-60971"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y20 (Left up Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505100000E3'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y20",
+              "Process": "",
+              "Min": ":030505100000E3",
+              "Max": "",
+              "ErrorCode": "E-92B6B"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y05 (Right down Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505050000EE'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y5",
+              "Process": "",
+              "Min": ":030505050000EE",
+              "Max": "",
+              "ErrorCode": "E-1DAF6"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y21 (Left down Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505110000E2'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y21",
+              "Process": "",
+              "Min": ":030505110000E2",
+              "Max": "",
+              "ErrorCode": "E-A5F9F"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 500ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "500",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": true,
+          "GotoLabel": "Nala Touch 5-Points",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "5P_RETEST",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Nala Touch 5-Points",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

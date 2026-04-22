@@ -1,0 +1,377 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Tracking Test",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Nickname",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "100: Tracking"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read Length",
+          "ArgumentValue": "24"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout(COM)",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "INI",
+          "ArgumentValue": "[Data]\r\nDataLen=24\r\nXPos=X0216([14:210][11:3210][12:3210][9:32])\r\nYPos=X0216([15:3210][16:3210][13:3210][14:3])\r\nTimeTick_unit_us=1000\r\nTimeStampPos=S([5][6][3][4])\r\n\r\n;incorrect event data will be skip\r\n;MonitorModeData_Event=11010C00      \r\n;MonitorModeData_filte_1=11FF0C000000000000000000000000000000000\r\n;MonitorModeData_filte_2=11FF0C000000000000000000000000000000000\r\n;MonitorModeData_StopEvent=11010C00xxxx000000000000\r\n\r\n\r\n[ExtraParaTS]\r\n;F1_Title=\r\n;F1_DataPos=\r\n;F2_Title=\r\n;F2_DataPos=\r\n;F3_Title=\r\n;F3_DataPos=\r\n;F4_Title=\r\n;F4_DataPos=\r\n;F5_Title=\r\n;F5_DataPos=\r\n;F6_Title=\r\n;F6_DataPos=\r\n\r\n[Parameter]\r\nTestcase=129\r\nTrackTime=2000\r\n; if UseConstantTimeStamp(ms) != 0 then accumulate time will use the constant time stamp as the period\r\nUseConstantTimeStamp(ms)=14\r\nTrackSpeed=6\r\nTrackAngle=29\r\n;Scale=1\r\nSkipData=0\r\nXY_LogFile=1\r\nXY_PictureLog=1\r\n;ConstLogFileName=overwrite\r\nBridge_TimeStamp=8\r\nTimeout=3000\r\nAbsPos_DPIbyDistance_inch = 4.25\r\nAbsPos_DPI_case = 0\r\n;Ideal_Start_X = 0\r\n;Ideal_Start_Y = 1785\r\n;Ideal_End_X = 2774\r\n;Ideal_End_Y = 0\r\nDefaultAxisXValue = 2176\r\nDefaultAxisYValue = 1195\r\n\r\n; 7.821mm = 0.307913386 inch\r\n;IgnoreDistanceFromIdealStart_inch = 0.307913386\r\n; 4.891mm = 0.192559055 inch\r\n;IgnoreDistanceFromIdealEnd_inch = 0.192559055\r\n\r\n[LinearityErr]\r\nModeOn=1\r\nUnit(mm)=1\r\nMidSpos(inch)=0.381\r\nMidEPos(inch)=3.813\r\nResRefDPI=600"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Window show",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Sno",
+          "ArgumentValue": "=$sno"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 85,
+          "VariableName": "TrkCount",
+          "Process": "",
+          "Min": "45",
+          "Max": "60",
+          "ErrorCode": "E-57DB2"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 86,
+          "VariableName": "#DPI",
+          "Process": "",
+          "Min": "500",
+          "Max": "600",
+          "ErrorCode": "E-C3777"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 87,
+          "VariableName": "trk_stdDev",
+          "Process": "",
+          "Min": "0",
+          "Max": "12",
+          "ErrorCode": "E-DA8F4"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 88,
+          "VariableName": "trk_MaxDev",
+          "Process": "",
+          "Min": "0",
+          "Max": "25",
+          "ErrorCode": "E-00E77"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 89,
+          "VariableName": "angle_abs",
+          "Process": "",
+          "Min": "27",
+          "Max": "31",
+          "ErrorCode": "E-78A27"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 90,
+          "VariableName": "angle_dev",
+          "Process": "",
+          "Min": "-2",
+          "Max": "2",
+          "ErrorCode": "E-6F45C"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 91,
+          "VariableName": "REQ",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-64C75"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 92,
+          "VariableName": "totalX",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-AFD99"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 93,
+          "VariableName": "totalY",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-0B363"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 94,
+          "VariableName": "SX",
+          "Process": "",
+          "Min": "0",
+          "Max": "150",
+          "ErrorCode": "E-DF8D7"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "SY",
+          "Process": "",
+          "Min": "0",
+          "Max": "140",
+          "ErrorCode": "E-8BE2C"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 96,
+          "VariableName": "EX",
+          "Process": "",
+          "Min": "2030",
+          "Max": "2176",
+          "ErrorCode": "E-C310F"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 97,
+          "VariableName": "EY",
+          "Process": "",
+          "Min": "1050",
+          "Max": "1195",
+          "ErrorCode": "E-2CFDB"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 98,
+          "VariableName": "ResErr_AllMax",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-FB119"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 99,
+          "VariableName": "ResErr_AllMin",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3CA9B"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 100,
+          "VariableName": "ResErr_AllAvg",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-225A5"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 101,
+          "VariableName": "ResErr_MidMax",
+          "Process": "",
+          "Min": "0",
+          "Max": "0.5",
+          "ErrorCode": "E-9DDDC"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 102,
+          "VariableName": "ResErr_MidMin",
+          "Process": "",
+          "Min": "0",
+          "Max": "0.5",
+          "ErrorCode": "E-94894"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 103,
+          "VariableName": "ResErr_MidAvg",
+          "Process": "",
+          "Min": "0",
+          "Max": "0.5",
+          "ErrorCode": "E-8F74E"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 104,
+          "VariableName": "ResErr_EdgeMax",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-44D87"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 105,
+          "VariableName": "ResErr_EdgeMin",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-ED131"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 106,
+          "VariableName": "ResErr_EdgeAvg",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-9CB05"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "TRK_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "101: Tracking window show",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "hide/show",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "101: Tracking window show"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 500ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "500",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "Nala Button Test",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Tracking Test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

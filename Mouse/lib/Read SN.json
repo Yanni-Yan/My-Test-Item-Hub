@@ -1,0 +1,506 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Test SN",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 0,
+          "VariableName": "8L_SN",
+          "Process": "2313LZ00ZHB8",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3C016"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 1,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Convert SN",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 0,
+          "VariableName": "SN_ASC",
+          "Process": "=str2asc(upper(var_8L_SN))",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-4EF1A"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 1,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Write SN",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_e"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_HPP_ConfigDevice+' 40 0B 00 ' + Extract(var_SN_ASC,2,'[1][2] ')\r\n"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+var_HPP_ConfigDevice+' 40 0B'",
+          "Max": "",
+          "ErrorCode": "E-05C5D"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 1,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read SN",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID1"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_HPP_ConfigDevice+' 50 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=substr(var_tmp,19:53)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=extract(var_tmp,3,'[1][2]')",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 0,
+          "VariableName": "w_sn",
+          "Process": "=asc2str(var_tmp)",
+          "Min": "=var_8L_SN",
+          "Max": "",
+          "ErrorCode": "E-7EA87"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 1,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read SN",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_e"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_HPP_ConfigDevice+' 50 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=substr(var_tmp,19:53)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=extract(var_tmp,3,'[1][2]')",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 41,
+          "VariableName": "w_sn",
+          "Process": "=asc2str(var_tmp)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7EA87"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Show SN",
+      "Command": "Show Text",
+      "Subcommand": "",
+      "CommandParameters": "='8L-SN:  '+ var_w_sn",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 33,
+          "VariableName": "PLID",
+          "Process": "=substr(var_UID,1,2)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-CFFBD"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 34,
+          "VariableName": "MID",
+          "Process": "=substr(var_UID,3,4)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-500D1"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 35,
+          "VariableName": "SNO1",
+          "Process": "=substr(var_UID,5,6,7,8)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3338D"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 36,
+          "VariableName": "year",
+          "Process": "=substr(var_UID,9,10,11,12)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-357DF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 37,
+          "VariableName": "month",
+          "Process": "=substr(var_UID,13,14)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-E5E2D"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 38,
+          "VariableName": "day",
+          "Process": "=substr(var_UID,15,16)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-748CC"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 39,
+          "VariableName": "UID_String1",
+          "Process": "=var_PLID+var_MID+var_SNO1+var_year+var_Month+var_day",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-FC662"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "waitkey",
+      "Command": "Wait Key",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Read SN",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

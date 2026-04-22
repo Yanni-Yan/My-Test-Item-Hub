@@ -1,0 +1,699 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read pin33 (DATA_SMT_CONN_GATED)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_digitalRead 33'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 90,
+          "VariableName": "PIN33",
+          "Process": "",
+          "Min": "0",
+          "Max": "",
+          "ErrorCode": "E-74E43"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read pin39 (DATA_GATED_RM_PULLUP)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_digitalRead 39'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 91,
+          "VariableName": "PIN39",
+          "Process": "",
+          "Min": "0",
+          "Max": "",
+          "ErrorCode": "E-CCA6B"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read pin43 (ACC_DATA_SYS )",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_digitalRead 43'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 92,
+          "VariableName": "PIN43",
+          "Process": "",
+          "Min": "0",
+          "Max": "",
+          "ErrorCode": "E-84FBE"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestInfo, UTS2.0",
+      "Label": "",
+      "Description": "If Q3 short, set pullup_en_l will be failed",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set PULLUP_EN_L=0",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_MODULE"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55149F02020202020202000202020202020202020202"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "21"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 93,
+          "VariableName": "PULLUP_EN_L",
+          "Process": "",
+          "Min": "141F01000000010100000100000000000001000101",
+          "Max": "",
+          "ErrorCode": "E-F92EB"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read pin33 (DATA_SMT_CONN_GATED)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_digitalRead 33'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 90,
+          "VariableName": "PIN33",
+          "Process": "",
+          "Min": "1",
+          "Max": "",
+          "ErrorCode": "E-74E43"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 1,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read pin39 (DATA_GATED_RM_PULLUP)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_digitalRead 39'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 91,
+          "VariableName": "PIN39",
+          "Process": "",
+          "Min": "1",
+          "Max": "",
+          "ErrorCode": "E-CCA6B"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read pin43 (ACC_DATA_SYS )",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_digitalRead 43'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 92,
+          "VariableName": "PIN43",
+          "Process": "",
+          "Min": "1",
+          "Max": "",
+          "ErrorCode": "E-84FBE"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Restore Normal GPIO",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_MODULE"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55149F00020202020202020202020202020202020202"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "21"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 62,
+          "VariableName": "GPIO_Default",
+          "Process": "",
+          "Min": "141F00000000010100010100000000000001000001",
+          "Max": "",
+          "ErrorCode": "E-D1720"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 10ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "10",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "ACC_DATA_SYS Check",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

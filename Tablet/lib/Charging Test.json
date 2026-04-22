@@ -1,0 +1,440 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 3000ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "3000",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "CC1",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 42,
+          "VariableName": "CC1",
+          "Process": "=numcal(var_CC1+1)",
+          "Min": "0",
+          "Max": "3",
+          "ErrorCode": "E-AF15D"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "Key IN 8L Part number",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "CC1++",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "CC1 Disable",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "=var_DevID_USBC"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "='10 FF 80 02 03 08 00'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 34,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-7FD6A"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 1000ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "1000",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "CC1 Enable",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_USBC"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command list",
+          "ArgumentValue": "='10 FF 80 02 03 08 08'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 34,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-7FD6A"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestInfo, UTS2.0",
+      "Label": "",
+      "Description": "Add Delay to ensure the voltage switch to 9V",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 6000ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "6000",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure SC_PWR @ Range 10V & Resolution DEF (5 1/2)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "5:QUERY"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "NickName",
+          "ArgumentValue": "DMM"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "NameofIDN",
+          "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "echo",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7FD6A"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 54,
+          "VariableName": "SC_PWR_CC1_mV",
+          "Process": "=NumCal(Var_echo*1000)",
+          "Min": "6000",
+          "Max": "9000",
+          "ErrorCode": "E-DD0A4"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 100,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "CC1++",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "CC1",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "CC1 Disable",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "=var_DevID_USBC"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "='10 FF 80 02 03 08 00'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 34,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-7FD6A"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "SC_PWR_Charging_CC1",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

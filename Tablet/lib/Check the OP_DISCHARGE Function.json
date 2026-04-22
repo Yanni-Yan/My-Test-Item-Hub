@@ -1,0 +1,377 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Enable OP_DISCHARGE(KBD)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55149F02010201020202020202010102020202020202"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "21"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 97,
+          "VariableName": "OP_DISCHARGE",
+          "Process": "",
+          "Min": "141F01010001010101010100010100000000000101",
+          "Max": "",
+          "ErrorCode": "E-06EE5"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get ADC Voltages(0x1D)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55011D"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "10"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-47E27"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Orion_ADC",
+          "Process": "=substr(var_ADC,5,6,7,8)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-D7A1F"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "USB_ADC",
+          "Process": "=substr(var_ADC,9,10,11,12)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-2F567"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RX_THRESHOLD_ADC",
+          "Process": "=substr(var_ADC,13,14,15,16)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7AD69"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "0V_CURRENT_OUTPUT_ADC",
+          "Process": "=substr(var_ADC,17,18,19,20)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-A3248"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 98,
+          "VariableName": "Orion_Voltage2",
+          "Process": "=numcal(Hex2Dec(var_Orion_ADC)/1000)",
+          "Min": "0",
+          "Max": "1",
+          "ErrorCode": "E-5214D"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 99,
+          "VariableName": "USB_Voltage2",
+          "Process": "=numcal(Hex2Dec(var_USB_ADC)/1000)",
+          "Min": "4.9",
+          "Max": "5.1",
+          "ErrorCode": "E-BD81B"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RX_THRESHOLD_Voltage2",
+          "Process": "=numcal(Hex2Dec(var_RX_THRESHOLD_ADC)/1000)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-4A82E"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "0V_CURRENT_OUTPUT_Voltage2",
+          "Process": "=numcal(Hex2Dec(var_0V_CURRENT_OUTPUT_ADC)/1000)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-B7868"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Restore Normal GPIO(KBD)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55149F00020202020202020202020202020202020202"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "21"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 100,
+          "VariableName": "Restore_Normal",
+          "Process": "",
+          "Min": "141F00000000010101010100000000000001000001",
+          "Max": "",
+          "ErrorCode": "E-29349"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 200ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "200",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Check OP_DISCHARGE",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

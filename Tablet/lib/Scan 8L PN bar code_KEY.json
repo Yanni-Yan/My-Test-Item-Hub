@@ -1,0 +1,97 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Keyin 8L Part Number(820-013236)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_KeyIn.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Subcommand",
+          "ArgumentValue": "01:String Tye"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Default value",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Form Title",
+          "ArgumentValue": "Please Scan 8L P/N"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Input Font Size",
+          "ArgumentValue": "12"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Caption String",
+          "ArgumentValue": "Please scan 8L P/N example: 820-013236"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Change Format",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Len Match(1)",
+          "ArgumentValue": "1:10"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": ""
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 45,
+          "VariableName": "8L_PN",
+          "Process": "",
+          "Min": "=var_8L_PN_Ini",
+          "Max": "",
+          "ErrorCode": "E-36A2D"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Scan Barcode_PN",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

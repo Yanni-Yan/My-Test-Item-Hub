@@ -1,0 +1,417 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set MFG_Name_ASC = Logitech 4C6F676974656368",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 90,
+          "VariableName": "MFG_Name_ASC",
+          "Process": "4C6F676974656368",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-83FD3"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 91,
+          "VariableName": "ManufacturingName",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-F2665"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read Manufacturing name",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "92: Query2"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "FF550113"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Return Type",
+              "ArgumentValue": "0"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "1000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": ""
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Read length",
+              "ArgumentValue": "2"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 92,
+              "VariableName": "UART_Feedback_MName",
+              "Process": "",
+              "Min": "0113",
+              "Max": "",
+              "ErrorCode": "E-58DFE"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "WMN_Logitech",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": true,
+          "GotoLabel": "End_MFGName",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Set Manufacturer Name",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "92: Query2"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "='FF550A9308'+Var_MFG_Name_ASC"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Return Type",
+              "ArgumentValue": "0"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "1000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": ""
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Read length",
+              "ArgumentValue": "10"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 56,
+              "VariableName": "UART_Feedback",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-05DAE"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "WMN_Logitech",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 50ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "50",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read Manufacturing name",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "92: Query2"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "FF550113"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Return Type",
+              "ArgumentValue": "0"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "1000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": ""
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Read length",
+              "ArgumentValue": "11"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 56,
+              "VariableName": "UART_Feedback",
+              "Process": "",
+              "Min": "1313xxxxxxxx",
+              "Max": "",
+              "ErrorCode": "E-05DAE"
+            },
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 93,
+              "VariableName": "ManufacturingNameASC",
+              "Process": "=SubStr(var_UART_Feedback, 7:22)",
+              "Min": "=var_MFG_Name_ASC",
+              "Max": "",
+              "ErrorCode": "E-89330"
+            },
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 91,
+              "VariableName": "ManufacturingName",
+              "Process": "=ASC2Str(Var_ManufacturingNameASC)",
+              "Min": "Logitech",
+              "Max": "",
+              "ErrorCode": "E-F2665"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Check the EEPROM content of Manufacturing name",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 10ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "10",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "End_MFGName",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Check & Set Manufacturer Name",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

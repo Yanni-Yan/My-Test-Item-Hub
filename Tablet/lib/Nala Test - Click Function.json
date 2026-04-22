@@ -1,0 +1,697 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "NALA_BTN = 0",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 107,
+          "VariableName": "NALA_BTN",
+          "Process": "0",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-A883D"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Clear Buffer",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Nickname",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "65: Purge Rx Buffer"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "NALA_BTN++ <= 3 (Retest NALA_BTN)",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 107,
+              "VariableName": "NALA_BTN",
+              "Process": "=numcal(var_NALA_BTN+1)",
+              "Min": "0",
+              "Max": "3",
+              "ErrorCode": "E-A883D"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y23 (Release NALA Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505130000E0'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y23",
+              "Process": "",
+              "Min": ":030505130000E0",
+              "Max": "",
+              "ErrorCode": "E-FE5BA"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 1000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "1000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Buffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Nickname",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "65: Purge Rx Buffer"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 20,
+          "WaitInterval": 200,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 200ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "200",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Set Y23 (NALA Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':03050513FF00E1'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "SET_Y23",
+              "Process": "",
+              "Min": ":03050513FF00E1",
+              "Max": "",
+              "ErrorCode": "E-7FDF9"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read data - press button",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "55: Read Data By Length"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Read Length",
+              "ArgumentValue": "24"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TimeOut(ms)",
+              "ArgumentValue": "1000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Return Type",
+              "ArgumentValue": "0"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 108,
+              "VariableName": "Nala_Press",
+              "Process": "",
+              "Min": "03XXXX01",
+              "Max": "",
+              "ErrorCode": "E-52F49"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 20,
+          "WaitInterval": 10,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "Press Button",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Press Button",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y23 (Release NALA Button)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505130000E0'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y23",
+              "Process": "",
+              "Min": ":030505130000E0",
+              "Max": "",
+              "ErrorCode": "E-FE5BA"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read data - release button",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "55: Read Data By Length"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Read Length",
+              "ArgumentValue": "24"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TimeOut(ms)",
+              "ArgumentValue": "1000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Return Type",
+              "ArgumentValue": "0"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 109,
+              "VariableName": "Nala_Release",
+              "Process": "",
+              "Min": "03XXXX00",
+              "Max": "",
+              "ErrorCode": "E-80FF9"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 200,
+          "WaitInterval": 10,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 2,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Buffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_ComPort_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Nickname",
+              "ArgumentValue": "=var_COM_KBD"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "65: Purge Rx Buffer"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 20,
+          "WaitInterval": 200,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Release Button",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Nala Button Test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

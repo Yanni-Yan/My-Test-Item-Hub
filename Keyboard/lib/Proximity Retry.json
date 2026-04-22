@@ -1,0 +1,1023 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Pairing Retry ++",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 40,
+              "VariableName": "Pairing_Retry",
+              "Process": "=numcal(var_Pairing_Retry+1)",
+              "Min": "0",
+              "Max": "2",
+              "ErrorCode": "E-5EC8F"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "6612_Batt=0V",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NameOfIDN",
+              "ArgumentValue": "VOLT 0V;OUTP 1;CURR 2A;"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Disable wireless notification",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "21 09 10 02 02 00 07 00 10 FF 80 00 00 00 00"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 52,
+              "VariableName": "Echo",
+              "Process": "",
+              "Min": "10 FF 80 00 00 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 2000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "2000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Enable wireless notification",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "21 09 10 02 02 00 07 00 10 FF 80 00 00 01 00"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 45,
+              "VariableName": "Enable_wireless_notification",
+              "Process": "",
+              "Min": "10 FF 80 00 00 00 00",
+              "Max": "",
+              "ErrorCode": "E-AF268"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Buffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "BufferCMD",
+              "ArgumentValue": "Clear"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Proximity Open Lock",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID1"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "='21 09 11 02 02 00 14 00 11 FF 82 B2 07 00 '+var_Open_Lock_timeout+' ' +var_RSSI_threshold+' '+var_LNA_gain+' '+var_AFF_gain+' '+substr(var_eQuad_ID,1:2)+' '+substr(var_eQuad_ID,3:4)+' '+substr(var_Mask_ID,1:2)+' '+substr(var_Mask_ID,3:4)+' ' +var_Page_Scan_Interval+' 00 00 00 00'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "5000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "Echo",
+              "Process": "",
+              "Min": "10 FF 82 B2 00 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "6612_Batt=3V",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NameOfIDN",
+              "ArgumentValue": "VOLT 3V;OUTP 1"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "Pairing Retry_1",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": true,
+          "GotoLabel": "Confirm Connection",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Pairing Retry_1",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Connection Retry ++",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 41,
+              "VariableName": "Connection_Retry",
+              "Process": "=numcal(var_Connection_Retry+1)",
+              "Min": "0",
+              "Max": "2",
+              "ErrorCode": "E-A2A10"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "6612_Batt=0V",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NameOfIDN",
+              "ArgumentValue": "VOLT 0V;OUTP 1;CURR 2A;"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Disable wireless notification",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "21 09 10 02 02 00 07 00 10 FF 80 00 00 00 00"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 52,
+              "VariableName": "Echo",
+              "Process": "",
+              "Min": "10 FF 80 00 00 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 2000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "2000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Enable wireless notification",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "21 09 10 02 02 00 07 00 10 FF 80 00 00 01 00"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 45,
+              "VariableName": "Enable_wireless_notification",
+              "Process": "",
+              "Min": "10 FF 80 00 00 00 00",
+              "Max": "",
+              "ErrorCode": "E-AF268"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Buffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "BufferCMD",
+              "ArgumentValue": "Clear"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Proximity Open Lock",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID1"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "='21 09 11 02 02 00 14 00 11 FF 82 B2 07 00 '+var_Open_Lock_timeout+' ' +var_RSSI_threshold+' '+var_LNA_gain+' '+var_AFF_gain+' '+substr(var_eQuad_ID,1:2)+' '+substr(var_eQuad_ID,3:4)+' '+substr(var_Mask_ID,1:2)+' '+substr(var_Mask_ID,3:4)+' ' +var_Page_Scan_Interval+' 00 00 00 00'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "5000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "Echo",
+              "Process": "",
+              "Min": "10 FF 82 B2 00 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 3,
+          "WaitInterval": 100,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "6612_Batt=3V",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NameOfIDN",
+              "ArgumentValue": "VOLT 3V;OUTP 1"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read Buffer to confirm pairing",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "Read"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID3"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 48,
+              "VariableName": "Paired",
+              "Process": "",
+              "Min": "='20 01 41 00 '+substr(var_eQuad_ID,3,4) + ' ' + substr(var_eQuad_ID,1,2)+' XX XX XX XX XX XX XX XX XX'",
+              "Max": "",
+              "ErrorCode": "E-FBB0B"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 49,
+              "VariableName": "DeviceAdd",
+              "Process": "=substr(var_Paired,31,32,34,35,37,38,40,41,43,44)",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-4AD71"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 60,
+          "WaitInterval": 100,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "Pairing Retry_1",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "Confirm Connection",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read connection buffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "SearchData"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID3"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "10 01 41 09 41"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "2000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 50,
+              "VariableName": "Connected",
+              "Process": "='10 01 41 09 41 '+substr(var_eQuad_ID,3,4) + ' ' + substr(var_eQuad_ID,1,2)",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-AB42B"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 20,
+          "WaitInterval": 10,
+          "FailJumpEnabled": true,
+          "FailJumpLabel": "Connection Retry_1",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": true,
+          "GotoLabel": "Disable",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Connection Retry_1",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Proximity Retry",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

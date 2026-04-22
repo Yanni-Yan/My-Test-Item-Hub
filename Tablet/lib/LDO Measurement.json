@@ -1,0 +1,421 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestInfo, UTS2.0",
+      "Label": "",
+      "Description": "Retain two decimal places.",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": " Measure VCC_PWR_A1",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_analogRead 1'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC_A1",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-BB6BA"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "VCC_PWR",
+          "Process": "=numcal(var_ADC_A1*5/1023)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7C748"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 35,
+          "VariableName": "V_VCC_PWR",
+          "Process": "=round(var_VCC_PWR,2)",
+          "Min": "4.9",
+          "Max": "5.1",
+          "ErrorCode": "E-E9E97"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure 3V0_A2",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_analogRead 2'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC_A2",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-93CE0"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "3V0",
+          "Process": "=numcal(var_ADC_A2*5/1023)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-58DC0"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 36,
+          "VariableName": "V_3V0",
+          "Process": "=round(var_3V0,2)",
+          "Min": "2.9",
+          "Max": "3.2",
+          "ErrorCode": "E-77F84"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure 1V85_A3",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_analogRead 3'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC_A3",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-D983F"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "1V85",
+          "Process": "=numcal(var_ADC_A3*5/1023)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3B340"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 37,
+          "VariableName": "V_1V85",
+          "Process": "=round(var_1V85,2)",
+          "Min": "1.8",
+          "Max": "1.95",
+          "ErrorCode": "E-CE1E0"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure 3V3_A4",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_analogRead 4'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC_A4",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-A099E"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "3V3",
+          "Process": "=numcal(var_ADC_A4*5/1023)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-EA748"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 38,
+          "VariableName": "V_3V3",
+          "Process": "=round(var_3V3,2)",
+          "Min": "3.3",
+          "Max": "3.5",
+          "ErrorCode": "E-9F7FD"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "LDO Measurements(10bits ADC)",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

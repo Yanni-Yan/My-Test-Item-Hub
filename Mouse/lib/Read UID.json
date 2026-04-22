@@ -1,0 +1,225 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read UID",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_DevID_e"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_HIDPP + ' 11 01 ' + var_HPP_EEPROM + ' 20 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "1500"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "UIDResponse",
+          "Process": "",
+          "Min": "='11 01 '+var_HPP_EEPROM+' 20 00 08'",
+          "Max": "",
+          "ErrorCode": "E-986A1"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 18,
+          "VariableName": "UID",
+          "Process": "=substr(var_UIDResponse,19,20,22,23,25,26,28,29,31,32,34,35,37,38,40,41)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-90920"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=substr(var_UID,1,2)!='FF'",
+          "Min": "True",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=substr(var_UID,1,2)!='00'",
+          "Min": "True",
+          "Max": "",
+          "ErrorCode": "E-3964B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "UID_1st",
+          "Process": "=substr(var_UIDResponse,19,20,22,23,25,26,28,29,31,32,34,35,37,38,40,41)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-10C55"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Show UID",
+      "Command": "Show Text",
+      "Subcommand": "",
+      "CommandParameters": "='UID:  '+ var_UID",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 33,
+          "VariableName": "PLID",
+          "Process": "=substr(var_UID,1,2)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-CFFBD"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 34,
+          "VariableName": "MID",
+          "Process": "=substr(var_UID,3,4)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-500D1"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 35,
+          "VariableName": "SNO1",
+          "Process": "=substr(var_UID,5,6,7,8)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3338D"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 36,
+          "VariableName": "year",
+          "Process": "=substr(var_UID,9,10,11,12)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-357DF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 37,
+          "VariableName": "month",
+          "Process": "=substr(var_UID,13,14)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-E5E2D"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 38,
+          "VariableName": "day",
+          "Process": "=substr(var_UID,15,16)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-748CC"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 39,
+          "VariableName": "UID_String1",
+          "Process": "=var_PLID+var_MID+var_SNO1+var_year+var_Month+var_day",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-FC662"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Read UID",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

@@ -1,0 +1,181 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get KBD Information",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID1"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "='21 09 11 02 02 00 14 00 11 01 ' + var_Index_ProPairing + ' 1F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(13,14,16,17,19,20,22,23);substr(25:47)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 67,
+          "VariableName": "KBD_Base_ADDR",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-E1927"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 68,
+          "VariableName": "Pairing_data_for_RCV",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-B44E8"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 34,
+          "VariableName": "UID",
+          "Process": "=var_KBD_Base_ADDR",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-965FF"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get Device Name",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID1"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "='21 09 11 02 02 00 14 00 11 01 ' + var_Index_DeviceName + ' 1F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "asc2str(13:60)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 69,
+          "VariableName": "Device_Name",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-B9E65"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "p0",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Get Device Name",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

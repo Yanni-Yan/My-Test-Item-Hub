@@ -1,0 +1,244 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Picture Load",
+      "Command": "Picture",
+      "Subcommand": "Load",
+      "CommandParameters": "=$testplanpath+'Crush_Pad.jpg'",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Wait key",
+      "Command": "Wait Key",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 1,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read BattVoltage",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_e"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_HPP_Battery+' 1F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "1500"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "FEEDBACK",
+          "Process": "",
+          "Min": "=' 11 01 '+var_HPP_Battery+' 1F'",
+          "Max": "",
+          "ErrorCode": "E-31828"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 42,
+          "VariableName": "battery_level",
+          "Process": "=substr(VAR_FEEDBACK,16,17)",
+          "Min": "04",
+          "Max": "",
+          "ErrorCode": "E-997A7"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 43,
+          "VariableName": "charging_status",
+          "Process": "=substr(VAR_FEEDBACK,19,20)",
+          "Min": "01",
+          "Max": "",
+          "ErrorCode": "E-0B590"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 44,
+          "VariableName": "external_power_status",
+          "Process": "=substr(VAR_FEEDBACK,22,23)",
+          "Min": "02",
+          "Max": "",
+          "ErrorCode": "E-567D0"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 45,
+          "VariableName": "BattCapacity",
+          "Process": "=HEX2DEC(VAR_FEEDBACK,13,14)",
+          "Min": "38",
+          "Max": "80",
+          "ErrorCode": "E-8890D"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 200,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Clear Pic",
+      "Command": "Picture",
+      "Subcommand": "Clear",
+      "CommandParameters": "",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "Value3",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_StepMotor"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "Command list",
+          "ArgumentValue": "='10 FF 80 0A '+Dec2Hex(var_MOTO_P1) +' '+ Dec2Hex(var_MOTO_P2)+' '+Dec2Hex(var_MOTO_P3)"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "1000"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Charging Status Check",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

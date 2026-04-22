@@ -1,0 +1,699 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "CC1 Disable",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_USBC"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command list",
+          "ArgumentValue": "='10 FF 80 02 03 08 00'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 25,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "CC2 Disable",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID_USBC"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command list",
+          "ArgumentValue": "='10 FF 80 02 03 10 00'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 25,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "OUT6-L/OUT75 4-H(Choose Power Brick Board 2.4A)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "command",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Value3",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_UART_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command list",
+          "ArgumentValue": "='10 FF 80 02 03 F0 B0'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Call Manufacturing Mode2",
+      "Command": "Function",
+      "Subcommand": "Call",
+      "CommandParameters": "Manufacturing Mode2",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get PDOs-2.4A(0x1E)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55011E"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "31"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "PDOs_Raw",
+          "Process": "",
+          "Min": "1E1E00000000000000000000000000000000000000000000000000ED900120",
+          "Max": "",
+          "ErrorCode": "E-BF368"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 69,
+          "VariableName": "PDO_DD1",
+          "Process": "=SubStr(var_PDOs_Raw,55,56,57,58,59,60,61,62)",
+          "Min": "ED900120",
+          "Max": "",
+          "ErrorCode": "E-D2025"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "SET Y20(DD Relay ON)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':03050510FF00E4'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "SET_Y20",
+          "Process": "",
+          "Min": ":03050510FF00E4",
+          "Max": "",
+          "ErrorCode": "E-225CD"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 500ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "500",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get PDOs-2.4A(0x1E)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55011E"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "31"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "PDOs_Raw",
+          "Process": "",
+          "Min": "1E1E00000000000000000000000000000000000000000000000000ED900120",
+          "Max": "",
+          "ErrorCode": "E-BF368"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 70,
+          "VariableName": "PDO_DD2",
+          "Process": "=SubStr(var_PDOs_Raw,55,56,57,58,59,60,61,62)",
+          "Min": "ED900120",
+          "Max": "",
+          "ErrorCode": "E-3DCB1"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RST Y20(DD Relay OFF)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "':030505100000E3'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RST_Y20",
+          "Process": "",
+          "Min": ":030505100000E3",
+          "Max": "",
+          "ErrorCode": "E-C3D49"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "OUT765-H/OUT4-L",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_HID.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "command",
+          "ArgumentValue": "HID++"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Value3",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_UART_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command list",
+          "ArgumentValue": "='10 FF 80 02 03 F0 E0'"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Check D+D-",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

@@ -1,0 +1,125 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "RES_Test++ <= 2 (Retest ESD Resistance_KBDFrame)",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 69,
+          "VariableName": "RES_Test",
+          "Process": "=NumCal(var_RES_Test+1)",
+          "Min": "1",
+          "Max": "2",
+          "ErrorCode": "E-29F29"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure DCR_KBDFrame_4-Wire",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "5:QUERY"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=Var_DMM_R"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "CMD String",
+          "ArgumentValue": "MEAS:FRES? 100"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "P6",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 70,
+          "VariableName": "DCR_KBDFrame_mOhm",
+          "Process": "=NumCal(var_DCR_KBDFrame_mOhm*1000)",
+          "Min": "0",
+          "Max": "30",
+          "ErrorCode": "E-FC4F3"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 1,
+      "WaitInterval": 100,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "ESD_RES_RETEST",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "ESD Resistance_KBDFrame",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

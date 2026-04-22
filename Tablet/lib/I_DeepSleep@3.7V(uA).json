@@ -1,0 +1,667 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Disable Nala mode",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55029800"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "3"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 115,
+          "VariableName": "Str_NalaMode",
+          "Process": "",
+          "Min": "021800",
+          "Max": "",
+          "ErrorCode": "E-21D38"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set DeepSleep Mode",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_KBD"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55028703"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "020703"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "3"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 130,
+          "VariableName": "Str_DeepSleep",
+          "Process": "",
+          "Min": "020703",
+          "Max": "",
+          "ErrorCode": "E-CB93B"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "6612 Range=MIN",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "NickName",
+          "ArgumentValue": "HP6612"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "NameofIDN",
+          "ArgumentValue": "SENS:CURR:RANG MIN"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 500ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "500",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "DeepSleep Current and Goto DeepsleepMode_End",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "5:QUERY"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "NickName",
+          "ArgumentValue": "HP6612"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Send",
+          "ArgumentValue": "MEAS:CURR?"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 131,
+          "VariableName": "#I_DeepSleep_3V7_mA",
+          "Process": "=numcal([var_#I_DeepSleep_3V7_mA]*1000)",
+          "Min": "0.2",
+          "Max": "1.0",
+          "ErrorCode": "E-9C5E2"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 3,
+      "WaitInterval": 100,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "SleepFail",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "DeepsleepMode_End",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Call Manufacturing Mode1",
+          "Command": "Function",
+          "Subcommand": "Call",
+          "CommandParameters": "Manufacturing Mode1",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Write Resistance Fail Flag(0C)",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_ComPort_cs.dll",
+              "Arguments": [
+                {
+                  "$id": "0",
+                  "ArgumentName": "ObjectIndex",
+                  "ArgumentValue": "=var_COM_KBD"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "92: Query2"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "TxCmd String",
+                  "ArgumentValue": "FF5503850C77"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Return Type",
+                  "ArgumentValue": "0"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Timeout",
+                  "ArgumentValue": "2000"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Echo EndString",
+                  "ArgumentValue": ""
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Purge Rx buf before Tx Cmd",
+                  "ArgumentValue": "1"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Read length",
+                  "ArgumentValue": "4"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": false,
+                  "PisIndex": 0,
+                  "VariableName": "UART_Feedback",
+                  "Process": "",
+                  "Min": "03050C77",
+                  "Max": "",
+                  "ErrorCode": "E-D75DA"
+                }
+              ],
+              "FailRetryEnabled": true,
+              "RetryCount": 5,
+              "WaitInterval": 100,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 10ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "10",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Read RESISTANCE Fail Flag(0C)",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_ComPort_cs.dll",
+              "Arguments": [
+                {
+                  "$id": "0",
+                  "ArgumentName": "ObjectIndex",
+                  "ArgumentValue": "=var_COM_KBD"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "92: Query2"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "TxCmd String",
+                  "ArgumentValue": "FF5502050C"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Return Type",
+                  "ArgumentValue": "0"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Timeout",
+                  "ArgumentValue": "1000"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Echo EndString",
+                  "ArgumentValue": ""
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Purge Rx buf before Tx Cmd",
+                  "ArgumentValue": "1"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Read length",
+                  "ArgumentValue": "4"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": false,
+                  "PisIndex": 0,
+                  "VariableName": "UART_Feedback",
+                  "Process": "",
+                  "Min": "03050CXX",
+                  "Max": "",
+                  "ErrorCode": "E-D75DA"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 101,
+                  "VariableName": "RES_Flag",
+                  "Process": "=SubStr(var_UART_Feedback, 7, 8)",
+                  "Min": "77",
+                  "Max": "",
+                  "ErrorCode": "E-EBA57"
+                }
+              ],
+              "FailRetryEnabled": true,
+              "RetryCount": 3,
+              "WaitInterval": 100,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "Resistance fail flag",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Sleep Current Fail",
+          "Command": "Variable Assign",
+          "Subcommand": "",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 131,
+              "VariableName": "#I_DeepSleep_3V7_mA",
+              "Process": "",
+              "Min": "0.2",
+              "Max": "1.0",
+              "ErrorCode": "E-9C5E2"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "SleepFail",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "DeepsleepMode_End",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "DeepsleepMode_End",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Set Power Deepsleep Mode",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

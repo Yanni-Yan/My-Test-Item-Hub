@@ -1,0 +1,267 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Check LogiNet_Enable",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "LogiNet_Enable",
+          "Process": "",
+          "Min": "1",
+          "Max": "",
+          "ErrorCode": "E-5BBA8"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "LogiNet2 Check Flag end",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Check Station Sequence >= 1",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "StationSeq_length",
+          "Process": "=length(var_Net_StationSeq)",
+          "Min": "1",
+          "Max": "2",
+          "ErrorCode": "E-9A7FD"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Net_stationSeq",
+          "Process": "",
+          "Min": "1",
+          "Max": "99",
+          "ErrorCode": "E-E4807"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "Go to get SeqNumber",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "Has SeqNum",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Call LogiNet2 Get Station Sequence",
+      "Command": "Function",
+      "Subcommand": "Call",
+      "CommandParameters": "LogiNet2 Get Station Sequence",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "Go to get SeqNumber",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "301: CheckLatestStatusByRules",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_LoginetQuery_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "301: CheckLatestStatusByRules"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "uid",
+          "ArgumentValue": "=Var_UID"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "project",
+          "ArgumentValue": "=$project"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "current stationSeq",
+          "ArgumentValue": "=var_Net_stationSeq"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 103,
+          "VariableName": "Net_CheckStatusHttpCode",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-02174"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 104,
+          "VariableName": "Net_LastStatus",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7EEF8"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 105,
+          "VariableName": "Net_CheckStatus_NotFoundCode",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-F0AC1"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 106,
+          "VariableName": "Net_CheckStatus_Result_ID",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-0CC96"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "Has SeqNum",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "LogiNet2 Check Flag end",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "LogiNet2 Check Flag end",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "LogiNet2 Check Flag",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

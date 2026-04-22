@@ -1,0 +1,276 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get ADC Voltages(0x1D)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_ComPort_cs.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_MODULE"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "92: Query2"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "FF55011D"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Return Type",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Read length",
+          "ArgumentValue": "10"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-47E27"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Orion_ADC",
+          "Process": "=substr(var_ADC,5,6,7,8)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-D7A1F"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "USB_ADC",
+          "Process": "=substr(var_ADC,9,10,11,12)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-2F567"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "RX_THRESHOLD_ADC",
+          "Process": "=substr(var_ADC,13,14,15,16)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7AD69"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "0V_CURRENT_OUTPUT_ADC",
+          "Process": "=substr(var_ADC,17,18,19,20)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-A3248"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 55,
+          "VariableName": "V_Orion",
+          "Process": "=numcal(Hex2Dec(var_Orion_ADC)/1000)",
+          "Min": "4.9",
+          "Max": "5.25",
+          "ErrorCode": "E-CF0FD"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 56,
+          "VariableName": "V_USB",
+          "Process": "=numcal(Hex2Dec(var_USB_ADC)/1000)",
+          "Min": "4.9",
+          "Max": "5.25",
+          "ErrorCode": "E-56897"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 57,
+          "VariableName": "V_RX_THRESHOLD",
+          "Process": "=numcal(Hex2Dec(var_RX_THRESHOLD_ADC)/1000)",
+          "Min": "1.5",
+          "Max": "1.53",
+          "ErrorCode": "E-548DF"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 58,
+          "VariableName": "V_0V_CURRENT_OUTPUT",
+          "Process": "=numcal(Hex2Dec(var_0V_CURRENT_OUTPUT_ADC)/1000)",
+          "Min": "0.5",
+          "Max": "0.7",
+          "ErrorCode": "E-E83CA"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure PPHV_A0",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_CommMini.dll",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "ObjectIndex",
+          "ArgumentValue": "=var_COM_ARDUINO"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "COMMAND",
+          "ArgumentValue": "52: Query"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String",
+          "ArgumentValue": "'_analogRead 0'0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "TxCmd String Type",
+          "ArgumentValue": "1"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Timeout",
+          "ArgumentValue": "2000"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Echo EndString",
+          "ArgumentValue": "0d0a"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Purge Rx buf before Tx Cmd",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC_A0",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-7C2FA"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "PPHV",
+          "Process": "=numcal(var_ADC_A0*5/1023)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-CEFCD"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 59,
+          "VariableName": "V_PPHV",
+          "Process": "=round(var_PPHV,2)",
+          "Min": "4.9",
+          "Max": "5.1",
+          "ErrorCode": "E-95D22"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 10,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 1,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Get ADC Voltages",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

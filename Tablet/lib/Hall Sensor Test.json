@@ -1,0 +1,1354 @@
+{
+  "$id": "0",
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "TCP_Server(0): ClearBuffer",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_Internet.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "TCP_Server"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "SubCommand",
+          "ArgumentValue": "ClearBuffer"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Value",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "=var_ClientIP"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "=var_ClientPort"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 25,
+          "VariableName": "",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-522F7"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set HallSensor_Pass = 1",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 57,
+          "VariableName": "HallSensor_Pass",
+          "Process": "1",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-53D7C"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read Data",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "=$testplanpath+'UTS_Internet.dll'",
+      "Arguments": [
+        {
+          "$id": "0",
+          "ArgumentName": "Command",
+          "ArgumentValue": "TCP_Server"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "SubCommand",
+          "ArgumentValue": "Read"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "Value",
+          "ArgumentValue": "0"
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": ""
+        },
+        {
+          "$id": "0",
+          "ArgumentName": "",
+          "ArgumentValue": "1000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 58,
+          "VariableName": "TCPS_IP",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-8A5BF"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 59,
+          "VariableName": "BB",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-A992D"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 60,
+          "VariableName": "CC",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-E552A"
+        },
+        {
+          "$id": "0",
+          "IsShowingInPis": true,
+          "PisIndex": 61,
+          "VariableName": "Make_NoData",
+          "Process": "=ASC2Str(var_CC,25,26,28,29,31,32,34,35,37,38,40,41,43,44,46,47)",
+          "Min": "0",
+          "Max": "",
+          "ErrorCode": "E-1E6BC"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "Put Hall Sensor Magnet above DUT",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "Read",
+      "Label": "Read",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "SET Y02(Hall Sensor Down)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':03050502FF00F2'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "SET_Y2",
+              "Process": "",
+              "Min": ":03050502FF00F2",
+              "Max": "",
+              "ErrorCode": "E-19169"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay1000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "1000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "TCP_Server(0): ClearBuffer",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "=$testplanpath+'UTS_Internet.dll'",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "TCP_Server"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "SubCommand",
+              "ArgumentValue": "ClearBuffer"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Value",
+              "ArgumentValue": "0"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "",
+              "ArgumentValue": "=var_ClientIP"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "",
+              "ArgumentValue": "=var_ClientPort"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 25,
+              "VariableName": "",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-522F7"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Put Hall Sensor Magnet above DUT",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "6612 Range=MIN",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "NameofIDN",
+              "ArgumentValue": "SENS:CURR:RANG MIN"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Hall Sensor ON Current for Hall Sensor Check",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "5:QUERY"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Send",
+              "ArgumentValue": "MEAS:CURR?"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": true,
+              "PisIndex": 62,
+              "VariableName": "I_HS_ON_3V7_uA",
+              "Process": "=numcal([var_I_HS_ON_3V7_uA]*1000000)",
+              "Min": "300",
+              "Max": "1000",
+              "ErrorCode": "E-795B0"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 25,
+          "WaitInterval": 200,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "6612 Range=MAX",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "NickName",
+              "ArgumentValue": "HP6612"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "NameofIDN",
+              "ArgumentValue": "SENS:CURR:RANG MAX"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "SET Y03 (Press Key)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':03050503FF00F1'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "SET_Y3",
+              "Process": "",
+              "Min": ":03050503FF00F1",
+              "Max": "",
+              "ErrorCode": "E-71A42"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 500ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "500",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Read Data - Press key (8)",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "=$testplanpath+'UTS_Internet.dll'",
+              "Arguments": [
+                {
+                  "$id": "0",
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "TCP_Server"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "SubCommand",
+                  "ArgumentValue": "Read"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Value",
+                  "ArgumentValue": "0"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "",
+                  "ArgumentValue": ""
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "",
+                  "ArgumentValue": "1000"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 58,
+                  "VariableName": "TCPS_IP",
+                  "Process": "",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-8A5BF"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 59,
+                  "VariableName": "BB",
+                  "Process": "",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-A992D"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 60,
+                  "VariableName": "CC",
+                  "Process": "",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-E552A"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 61,
+                  "VariableName": "Make_NoData",
+                  "Process": "=ASC2Str(var_CC,25,26,28,29,31,32,34,35,37,38,40,41,43,44,46,47)",
+                  "Min": "0aXXXX25",
+                  "Max": "",
+                  "ErrorCode": "E-1E6BC"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": true,
+              "FailJumpLabel": "Check_Release",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HallSensor_Pass = 0",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 57,
+                  "VariableName": "HallSensor_Pass",
+                  "Process": "0",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-53D7C"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": true,
+              "GotoLabel": "Hall-Sensor_NG",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "RST Y03(Release Key)",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_CommMini.dll",
+              "Arguments": [
+                {
+                  "$id": "0",
+                  "ArgumentName": "ObjectIndex",
+                  "ArgumentValue": "1"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "COMMAND",
+                  "ArgumentValue": "52: Query"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "TxCmd String",
+                  "ArgumentValue": "':030505030000F0'0d0a"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "TxCmd String Type",
+                  "ArgumentValue": "1"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Timeout",
+                  "ArgumentValue": "2000"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Echo EndString",
+                  "ArgumentValue": "0d0a"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Purge Rx buf before Tx Cmd",
+                  "ArgumentValue": "1"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": false,
+                  "PisIndex": 0,
+                  "VariableName": "RST_Y3",
+                  "Process": "",
+                  "Min": ":030505030000F0",
+                  "Max": "",
+                  "ErrorCode": "E-6EE0A"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "Check_Release",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 500ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "500",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Read Data - Release key (8)",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "=$testplanpath+'UTS_Internet.dll'",
+              "Arguments": [
+                {
+                  "$id": "0",
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "TCP_Server"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "SubCommand",
+                  "ArgumentValue": "Read"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "Value",
+                  "ArgumentValue": "0"
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "",
+                  "ArgumentValue": ""
+                },
+                {
+                  "$id": "0",
+                  "ArgumentName": "",
+                  "ArgumentValue": "1000"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 58,
+                  "VariableName": "TCPS_IP",
+                  "Process": "",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-8A5BF"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 59,
+                  "VariableName": "BB",
+                  "Process": "",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-A992D"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 60,
+                  "VariableName": "CC",
+                  "Process": "",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-E552A"
+                },
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 63,
+                  "VariableName": "Break_NoData",
+                  "Process": "=ASC2Str(var_CC,25,26,28,29,31,32,34,35,37,38,40,41,43,44,46,47)",
+                  "Min": "0bXXXX25",
+                  "Max": "",
+                  "ErrorCode": "E-4E102"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": true,
+              "FailJumpLabel": "Hall-Sensor_OK",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HallSensor_Pass = 0",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 57,
+                  "VariableName": "HallSensor_Pass",
+                  "Process": "0",
+                  "Min": "",
+                  "Max": "",
+                  "ErrorCode": "E-53D7C"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Check Hall-Sensor",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 57,
+                  "VariableName": "HallSensor_Pass",
+                  "Process": "",
+                  "Min": "1",
+                  "Max": "",
+                  "ErrorCode": "E-53D7C"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "Hall-Sensor_NG",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            },
+            {
+              "$id": "0",
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Check G-Sensor",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": "0",
+                  "IsShowingInPis": true,
+                  "PisIndex": 57,
+                  "VariableName": "HallSensor_Pass",
+                  "Process": "",
+                  "Min": "1",
+                  "Max": "",
+                  "ErrorCode": "E-53D7C"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "Hall-Sensor_OK",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": "0"
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "Key(8)",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "No Key Code",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    },
+    {
+      "$id": "0",
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "RST Y02(Hall Sensor Up)",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_CommMini.dll",
+          "Arguments": [
+            {
+              "$id": "0",
+              "ArgumentName": "ObjectIndex",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "COMMAND",
+              "ArgumentValue": "52: Query"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String",
+              "ArgumentValue": "':030505020000F1'0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "TxCmd String Type",
+              "ArgumentValue": "1"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Timeout",
+              "ArgumentValue": "2000"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Echo EndString",
+              "ArgumentValue": "0d0a"
+            },
+            {
+              "$id": "0",
+              "ArgumentName": "Purge Rx buf before Tx Cmd",
+              "ArgumentValue": "1"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": "0",
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "RST_Y2",
+              "Process": "",
+              "Min": ":030505020000F1",
+              "Max": "",
+              "ErrorCode": "E-B0F37"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay1000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "1000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        },
+        {
+          "$id": "0",
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Clear Picture",
+          "Command": "Picture",
+          "Subcommand": "Clear",
+          "CommandParameters": "",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": "0"
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "Remove Hall Sensor Magnet from DUT",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": "0"
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Hall Sensor Test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}
