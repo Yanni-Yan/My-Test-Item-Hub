@@ -1,0 +1,344 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "USB_6612=0V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_USB_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 0V;OUTP 1"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "BATT_6612=3.8V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 3.8V;OUTP 1"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set All LED OFF",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_LEDTest_g+' 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+var_Index_LEDTest_g+' 20 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Backlight OFF",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_BacklightTest_g+' 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+var_Index_BacklightTest_g+' 20 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "I_LED_OFF",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "5:QUERY"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "Send",
+          "ArgumentValue": "MEAS:CURR?"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 81,
+          "VariableName": "#I_LED_OFF",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-72EEF"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [],
+      "Label": "Indicator Current test",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [],
+      "Label": "Backlight Current test",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "LED and Backlight Current Test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

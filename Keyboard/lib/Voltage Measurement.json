@@ -1,0 +1,990 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "All disconnect",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_DevID_MagnetBoard"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 12,
+          "VariableName": "ECHO",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "V_NRF connect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 01'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "DMM Read V_NRF",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "5:Query"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "='34450A'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": ""
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "V_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-029AD"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 90,
+              "VariableName": "#V_NRF",
+              "Process": "=NumCal(var_V_temp*1 )",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-BB6B3"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 2,
+          "WaitInterval": 300,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "All disconnect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 00'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "V_NRF",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "V_LED connect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 02'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "DMM Read V_LED",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "5:Query"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "='34450A'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": ""
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "V_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-029AD"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 91,
+              "VariableName": "#V_LED",
+              "Process": "=NumCal(var_V_temp*1 )",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-40F21"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 2,
+          "WaitInterval": 300,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "All disconnect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 00'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "V_LED",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "V_HALL connect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 08'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "DMM Read V_HALL",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "5:Query"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "='34450A'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": ""
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "V_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-029AD"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 92,
+              "VariableName": "#V_HALL",
+              "Process": "=NumCal(var_V_temp*1 )",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-C9251"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 2,
+          "WaitInterval": 300,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "All disconnect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 00'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "V_HALL",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "V_SlaveMCU connect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 04'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "DMM Read V_SlaveMCU",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "5:Query"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "='34450A'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": ""
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "V_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-029AD"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 93,
+              "VariableName": "#V_SlaveMCU",
+              "Process": "=NumCal(var_V_temp*1 )",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-50519"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 2,
+          "WaitInterval": 300,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "All disconnect",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_DevID_MagnetBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 00'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "3000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 12,
+              "VariableName": "ECHO",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-20BCF"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 10,
+          "WaitInterval": 20,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "V_SlaveMCU",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Voltage Measurement",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

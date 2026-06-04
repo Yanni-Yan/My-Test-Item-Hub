@@ -1,0 +1,1011 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "BATT 6612=4.2V",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "=var_BATT_6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "CommandtoPPS",
+              "ArgumentValue": "VOLT 4.2V"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Delay 100ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "100",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "NTC resistor = 10K",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID_UARTBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 30 20'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "2000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 102,
+              "VariableName": "Result",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-1AD03"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HP6612_Batt=3.9V",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "3:Write"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_BATT_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "VOLT 3.9V"
+                }
+              ],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 100ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "100",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HP6612_USB=5V",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "3:Write"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_USB_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "VOLT 5V"
+                }
+              ],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 500ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "500",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Check Charging Current@USB",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "5:Query"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_USB_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "meas:curr?"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": null,
+                  "IsShowingInPis": true,
+                  "PisIndex": 103,
+                  "VariableName": "#I_Charge_USB_10K_3V9",
+                  "Process": "=numcal([var_#I_Charge_USB_10K_3V9] * 1000)",
+                  "Min": "460",
+                  "Max": "495",
+                  "ErrorCode": "E-4BCAE"
+                }
+              ],
+              "FailRetryEnabled": true,
+              "RetryCount": 60,
+              "WaitInterval": 50,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "NTC = 10K",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "Charging",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HP6612_Batt=4V2",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "3:Write"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_BATT_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "VOLT 4.2V"
+                }
+              ],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 100ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "100",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HP6612_USB=5V",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "3:Write"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_USB_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "VOLT 5V"
+                }
+              ],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 500ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "500",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Check Charging Current@USB",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "5:Query"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_USB_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "meas:curr?"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": null,
+                  "IsShowingInPis": true,
+                  "PisIndex": 104,
+                  "VariableName": "#I_Charge_USB_10K_4V2",
+                  "Process": "=numcal([var_#I_Charge_USB_10K_4V2] * 1000)",
+                  "Min": "0",
+                  "Max": "12",
+                  "ErrorCode": "E-05F7A"
+                }
+              ],
+              "FailRetryEnabled": true,
+              "RetryCount": 60,
+              "WaitInterval": 50,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "Stop charging",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "Stop charging",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "NTC = 10K",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Set HP6612_USB=0V",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "3:Write"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "Nick Name",
+              "ArgumentValue": "=var_USB_6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NameOfIDN",
+              "ArgumentValue": "VOLT 0V"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "NTC resistor = 2K ohm",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "HID++Request"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID_UARTBoard"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 30 10'"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "timeout",
+              "ArgumentValue": "2000"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 102,
+              "VariableName": "Result",
+              "Process": "",
+              "Min": "10 FF 80 02 03 00 00",
+              "Max": "",
+              "ErrorCode": "E-1AD03"
+            }
+          ],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HP6612_Batt=3.9V",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "3:Write"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_BATT_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "VOLT 3.9V"
+                }
+              ],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 100ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "100",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Set HP6612_USB=5V",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "3:Write"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_USB_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "VOLT 5V"
+                }
+              ],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Delay 500ms",
+              "Command": "Delay",
+              "Subcommand": "",
+              "CommandParameters": "500",
+              "Arguments": [],
+              "ResultVariables": [],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            },
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "Check Charging Current@USB",
+              "Command": "DLL",
+              "Subcommand": "Execute",
+              "CommandParameters": "UTS2_VISA_cs.dll",
+              "Arguments": [
+                {
+                  "$id": null,
+                  "ArgumentName": "Command",
+                  "ArgumentValue": "5:Query"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "Nick Name",
+                  "ArgumentValue": "=var_USB_6612"
+                },
+                {
+                  "$id": null,
+                  "ArgumentName": "NameOfIDN",
+                  "ArgumentValue": "meas:curr?"
+                }
+              ],
+              "ResultVariables": [
+                {
+                  "$id": null,
+                  "IsShowingInPis": true,
+                  "PisIndex": 105,
+                  "VariableName": "#I_Charge_USB_2K_3V9",
+                  "Process": "=numcal([var_#I_Charge_USB_2K_3V9] * 1000)",
+                  "Min": "0",
+                  "Max": "12",
+                  "ErrorCode": "E-6DAD0"
+                }
+              ],
+              "FailRetryEnabled": true,
+              "RetryCount": 60,
+              "WaitInterval": 50,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "NTC = 2K",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "NCharging@5V",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "NTC = 2K",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "NTC Charging Test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

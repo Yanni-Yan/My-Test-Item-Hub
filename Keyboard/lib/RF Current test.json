@@ -1,0 +1,1199 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "USB_6612=0V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_USB_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 0V;OUTP 1"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "BATT_6612=3.8V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 3.8V;OUTP 1"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set All LED OFF",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_LEDTest_g+' 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+var_Index_LEDTest_g+' 20 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Set Backlight OFF",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_BacklightTest_g+' 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+var_Index_BacklightTest_g+' 20 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "I_MCU",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "5:QUERY"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "MEAS:CURR?"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "I_MCU_temp",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-3B69C"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 82,
+          "VariableName": "I_MCU",
+          "Process": "=numcal(var_I_MCU_temp*1000)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-79D38"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Set RF CW ON @ 2403",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "USBRequest"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_gDevID3"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_RFTest_g+' 1F 03 06 01 00'"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 125,
+          "WaitInterval": 25,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "delay 1000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "1000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "I_MCU_2G403",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "5:QUERY"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "=var_BATT_6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "CommandtoPPS",
+              "ArgumentValue": "MEAS:CURR?"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 83,
+              "VariableName": "I_RF_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-C759B"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 84,
+              "VariableName": "I_RF_2G403",
+              "Process": "=numcal(var_I_RF_temp*1000)",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-394EC"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 20,
+          "WaitInterval": 10,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read Buffer to confirm connection",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "Read"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID3"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "substr(1:14)"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "Connected",
+              "Process": "",
+              "Min": "='11 01 ' +var_Index_RFTest_g+' 1F 00'",
+              "Max": "",
+              "ErrorCode": "E-3B839"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 100,
+          "WaitInterval": 80,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "I_2G403(mA)",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": null,
+                  "IsShowingInPis": true,
+                  "PisIndex": 85,
+                  "VariableName": "#I_2G403",
+                  "Process": "=numcal(var_I_RF_2G403-var_I_MCU)",
+                  "Min": "8",
+                  "Max": "25",
+                  "ErrorCode": "E-91A34"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "2403",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "RF2.403",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Set RF CW ON @ 2442",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "USBRequest"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_gDevID3"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_RFTest_g+' 1F 2A 06 01 00'"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 125,
+          "WaitInterval": 25,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "delay 1000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "1000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "I_MCU_2G442",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "5:QUERY"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "=var_BATT_6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "CommandtoPPS",
+              "ArgumentValue": "MEAS:CURR?"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 83,
+              "VariableName": "I_RF_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-C759B"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 86,
+              "VariableName": "I_RF_2G442",
+              "Process": "=numcal(var_I_RF_temp*1000)",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-AE552"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 20,
+          "WaitInterval": 10,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read Buffer to confirm connection",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "Read"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID3"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "substr(1:14)"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "Connected",
+              "Process": "",
+              "Min": "='11 01 ' +var_Index_RFTest_g+' 1F 00'",
+              "Max": "",
+              "ErrorCode": "E-3B839"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 100,
+          "WaitInterval": 80,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "I_2G442(mA)",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": null,
+                  "IsShowingInPis": true,
+                  "PisIndex": 87,
+                  "VariableName": "#I_2G442",
+                  "Process": "=numcal(var_I_RF_2G442-var_I_MCU)",
+                  "Min": "8",
+                  "Max": "25",
+                  "ErrorCode": "E-7BB9F"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "2442",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "RF2.442",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestGroup, UTS2.0",
+      "Name": "",
+      "Children": [
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Set RF CW ON @ 2479",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "USB"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "USBRequest"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID1"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_RFTest_g+' 1F 4F 06 01 00'"
+            }
+          ],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 125,
+          "WaitInterval": 25,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "delay 1000ms",
+          "Command": "Delay",
+          "Subcommand": "",
+          "CommandParameters": "1000",
+          "Arguments": [],
+          "ResultVariables": [],
+          "FailRetryEnabled": false,
+          "RetryCount": 0,
+          "WaitInterval": 0,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "I_MCU_2G479",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_VISA_cs.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "Command",
+              "ArgumentValue": "5:QUERY"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "NickName",
+              "ArgumentValue": "=var_BATT_6612"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "CommandtoPPS",
+              "ArgumentValue": "MEAS:CURR?"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 83,
+              "VariableName": "I_RF_temp",
+              "Process": "",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-C759B"
+            },
+            {
+              "$id": null,
+              "IsShowingInPis": true,
+              "PisIndex": 88,
+              "VariableName": "I_RF_2G479",
+              "Process": "=numcal(var_I_RF_temp*1000)",
+              "Min": "",
+              "Max": "",
+              "ErrorCode": "E-A7DBC"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 20,
+          "WaitInterval": 10,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestItem, UTS2.0",
+          "Name": "Read Buffer to confirm connection",
+          "Command": "DLL",
+          "Subcommand": "Execute",
+          "CommandParameters": "UTS2_Drivers.dll",
+          "Arguments": [
+            {
+              "$id": null,
+              "ArgumentName": "command",
+              "ArgumentValue": "Buffer_Control"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "subcommand",
+              "ArgumentValue": "Read"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "DevID",
+              "ArgumentValue": "=var_DevID3"
+            },
+            {
+              "$id": null,
+              "ArgumentName": "",
+              "ArgumentValue": "substr(1:14)"
+            }
+          ],
+          "ResultVariables": [
+            {
+              "$id": null,
+              "IsShowingInPis": false,
+              "PisIndex": 0,
+              "VariableName": "Connected",
+              "Process": "",
+              "Min": "='11 01 ' +var_Index_RFTest_g+' 1F 00'",
+              "Max": "",
+              "ErrorCode": "E-3B839"
+            }
+          ],
+          "FailRetryEnabled": true,
+          "RetryCount": 100,
+          "WaitInterval": 80,
+          "FailJumpEnabled": false,
+          "FailJumpLabel": "",
+          "LoopEnabled": false,
+          "LoopLabel": "",
+          "LoopCount": 0,
+          "IfEnabled": false,
+          "IfJumpLabel": "",
+          "IfConditions": [],
+          "IfLogic": 0,
+          "GotoEnabled": false,
+          "GotoLabel": "",
+          "Label": "",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        },
+        {
+          "$id": null,
+          "$type": "UTS2._0.TestGroup, UTS2.0",
+          "Name": "",
+          "Children": [
+            {
+              "$id": null,
+              "$type": "UTS2._0.TestItem, UTS2.0",
+              "Name": "I_2G479(mA)",
+              "Command": "Variable Assign",
+              "Subcommand": "",
+              "CommandParameters": "",
+              "Arguments": [],
+              "ResultVariables": [
+                {
+                  "$id": null,
+                  "IsShowingInPis": true,
+                  "PisIndex": 89,
+                  "VariableName": "#I_2G479",
+                  "Process": "=numcal(var_I_RF_2G479-var_I_MCU)",
+                  "Min": "8",
+                  "Max": "25",
+                  "ErrorCode": "E-0F8F6"
+                }
+              ],
+              "FailRetryEnabled": false,
+              "RetryCount": 0,
+              "WaitInterval": 0,
+              "FailJumpEnabled": false,
+              "FailJumpLabel": "",
+              "LoopEnabled": false,
+              "LoopLabel": "",
+              "LoopCount": 0,
+              "IfEnabled": false,
+              "IfJumpLabel": "",
+              "IfConditions": [],
+              "IfLogic": 0,
+              "GotoEnabled": false,
+              "GotoLabel": "",
+              "Label": "",
+              "Description": "",
+              "Status": 0,
+              "BackupStatus": 0,
+              "Parent": {
+                "$ref": null
+              },
+              "Section": 1
+            }
+          ],
+          "Label": "2479",
+          "Description": "",
+          "Status": 0,
+          "BackupStatus": 0,
+          "Parent": {
+            "$ref": null
+          },
+          "Section": 1
+        }
+      ],
+      "Label": "RF2.479",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "RF Current test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

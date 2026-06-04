@@ -1,0 +1,590 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "OPEN LARK(046D_C372)",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "OPENDEVICE"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "VID",
+          "ArgumentValue": "0x046D"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "PID",
+          "ArgumentValue": "0xC372"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 21,
+          "VariableName": "DevID",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-4E068"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "VID",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-4C574"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "PID",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-52044"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 500,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get EndPoint1 ID",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "GetIDByEpNo"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "EndPoint",
+          "ArgumentValue": "1"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 22,
+          "VariableName": "DevID1",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-99D9F"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get EndPoint2 ID",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "GetIDByEpNo"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "EndPoint",
+          "ArgumentValue": "2"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 23,
+          "VariableName": "DevID2",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-BED73"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Get EndPoint3 ID",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "GetIDByEpNo"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "EndPoint",
+          "ArgumentValue": "3"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 24,
+          "VariableName": "DevID3",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-2706F"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "get feature 1e00 EnableHidden",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 FF 00 00 1e 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "50"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(13,14)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Index_EnableHidden",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-5E95B"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "get feature 8070 ColorLEDCalibration",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "get feature 1eb0 AccessMem",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 FF 00 00 1e b0 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "50"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(13,14)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Index_EEPROM",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-4E24E"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "get feature 8070 ColorLEDCalibration",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "get feature 1802 Device Reset",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 FF 00 00 18 02 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "50"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(13,14)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Index_DeviceReset",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-0FCEF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "get feature 8070 ColorLEDCalibration",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Enable Hidden features",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_DevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 FF '+var_index_EnableHidden+' 1F 01'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 12,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 73,
+          "VariableName": "Echo1",
+          "Process": "=substr(var_Echo,1:17)",
+          "Min": "='11 FF '+var_index_EnableHidden+' 1F 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Type-C A side test",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

@@ -1,0 +1,1093 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read ADC Calibration requirement-Gothard",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_ADCStatus_g+' 0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "='11 01 '+ var_Index_ADCStatus_g+' 0F'",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "N_Cal_PNTs",
+          "Process": "=substr(var_Echo,13,14)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-6ED2F"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC1_mV",
+          "Process": "=Hex2Dec(substr(var_Echo,19,20,22,23))",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-B4B24"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC1_Req_V",
+          "Process": "=NumCal(var_ADC1_mV/1000)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-FC2EE"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC2_mV",
+          "Process": "=Hex2Dec(substr(var_Echo,25,26,28,29))",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-98043"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ADC2_Req_V",
+          "Process": "=NumCal(var_ADC2_mV/1000)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-78934"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Disable cutoff mode-Gothard",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_ADCStatus_g+' 4F 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "='11 01 '+ var_Index_ADCStatus_g+' 4F 01'",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestInfo, UTS2.0",
+      "Label": "",
+      "Description": "------------------Cut Off---------------------",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "BATT 6612=3.50V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 3.50V;OUTP 1;"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Connect VDD_BATT to DMM pin5",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_DevID_MagnetBoard"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 10'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ECHO",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 200ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "200",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": " DMM V_BATT_3V50",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "5:Query"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "='34450A'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": ""
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "V_temp",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-029AD"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 94,
+          "VariableName": "#V_BATT_DMM_3V48",
+          "Process": "=NumCal(var_V_temp*1 )",
+          "Min": "3.49",
+          "Max": "3.51",
+          "ErrorCode": "E-16D78"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure BatteryADC",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "FN",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 01 ' + var_Index_ADCStatus_g + ' 10 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "ADC_Echo",
+          "Process": "",
+          "Min": "='11 01 '+var_index_ADCStatus_g +' 10 XX XX'",
+          "Max": "",
+          "ErrorCode": "E-6F23B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 96,
+          "VariableName": "CutOff_ADC_H",
+          "Process": "=substr(var_adc_echo,13:17)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-963FE"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 97,
+          "VariableName": "CutOff_ADC_D",
+          "Process": "=HEX2Dec(var_ADC_ECHO,13,14,16,17)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-AE232"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "CutOff_ADC",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 98,
+          "VariableName": "#CutOff_ADC",
+          "Process": "=var_CutOff_ADC_D",
+          "Min": "780",
+          "Max": "840",
+          "ErrorCode": "E-5D122"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestInfo, UTS2.0",
+      "Label": "",
+      "Description": "------------------Cut Off---------------------",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "BATT 6612=4.20V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 4.20V"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Connect VDD_BATT to DMM pin5",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_DevID_MagnetBoard"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_HIDPP+' 10 FF 80 02 03 FF 10'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "3000"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "ECHO",
+          "Process": "",
+          "Min": "10 FF 80 02 03 00 00",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 20,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Delay 200ms",
+      "Command": "Delay",
+      "Subcommand": "",
+      "CommandParameters": "200",
+      "Arguments": [],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": " DMM V_BATT_4V20",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "5:Query"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "='34450A'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "MEAS:VOLT:DC? 10,DEF"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": ""
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "V_temp",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-029AD"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 94,
+          "VariableName": "#V_BATT_DMM_3V48",
+          "Process": "=NumCal(var_V_temp*1 )",
+          "Min": "4.19",
+          "Max": "4.21",
+          "ErrorCode": "E-16D78"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 10,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Measure BatteryADC",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "FN",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 01 ' + var_Index_ADCStatus_g + ' 10 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:17)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "ADC_Echo",
+          "Process": "",
+          "Min": "='11 01 '+var_index_ADCStatus_g +' 10 XX XX'",
+          "Max": "",
+          "ErrorCode": "E-6F23B"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 99,
+          "VariableName": "Full_ADC_H",
+          "Process": "=substr(var_adc_echo,13:17)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-C61D3"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 100,
+          "VariableName": "Full_ADC_D",
+          "Process": "=HEX2Dec(var_ADC_ECHO,13,14,16,17)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-0E6C6"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Full_ADC",
+      "Command": "Variable Assign",
+      "Subcommand": "",
+      "CommandParameters": "",
+      "Arguments": [],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 101,
+          "VariableName": "#Full_ADC",
+          "Process": "=var_Full_ADC_D",
+          "Min": "960",
+          "Max": "1020",
+          "ErrorCode": "E-663A5"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Store Calibration",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "FN",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 01 ' + var_Index_ADCStatus_g + ' 20 02 00 ' +var_CutOff_ADC_H + ' ' +var_Full_ADC_H"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:14)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "ADC_Echo",
+          "Process": "",
+          "Min": "='11 01 '+var_index_ADCStatus_g +' 20 00'",
+          "Max": "",
+          "ErrorCode": "E-6F23B"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read Calibration",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "FN",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP + ' 11 01 ' + var_Index_ADCStatus_g + ' 30 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:29)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 95,
+          "VariableName": "ADC_Echo",
+          "Process": "",
+          "Min": "='11 01 '+var_index_ADCStatus_g + ' 30 02 00 ' +var_CutOff_ADC_H + ' ' +var_Full_ADC_H",
+          "Max": "",
+          "ErrorCode": "E-6F23B"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "ADC Calibration",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

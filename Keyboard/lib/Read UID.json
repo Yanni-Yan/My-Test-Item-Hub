@@ -1,0 +1,112 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read UID",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "=var_HIDPP + ' 11 01 ' + var_Index_EEPROM + ' 2F 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "",
+          "ArgumentValue": "1500"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 74,
+          "VariableName": "UIDResponse",
+          "Process": "",
+          "Min": "='11 01 '+var_index_EEPROM+' 2F 00 08'",
+          "Max": "",
+          "ErrorCode": "E-1C659"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 75,
+          "VariableName": "UID",
+          "Process": "=substr(var_UIDResponse,19,20,22,23,25,26,28,29,31,32,34,35,37,38,40,41)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-965FF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=substr(var_UID,1:6)!='FFFFFF'",
+          "Min": "True",
+          "Max": "",
+          "ErrorCode": "E-F48DA"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "tmp",
+          "Process": "=substr(var_UID,1:6)!='000000'",
+          "Min": "True",
+          "Max": "",
+          "ErrorCode": "E-F48DA"
+        }
+      ],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": true,
+      "FailJumpLabel": "Jump Write UID",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": true,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Read UID",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

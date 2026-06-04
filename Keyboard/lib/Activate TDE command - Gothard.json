@@ -1,0 +1,398 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Enable Hidden features",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_index_EnableHidden+' 1F 01'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "100"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 12,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 73,
+          "VariableName": "Echo1",
+          "Process": "=substr(var_Echo,1:17)",
+          "Min": "='11 01 '+var_index_EnableHidden+' 1F 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Authentication-Start Manuf Session",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_PWDAuthenticate+' 0F '+Extract(var_x1E02_Manuf,2,'[1][2] ')\r\n"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:20)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 73,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+ var_Index_PWDAuthenticate +' 0F 01'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Authentication-Provide PWD - Gothard",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_PWDAuthenticate+' 2F '+Extract(var_DevManuf_PWD,2,'[1][2] ')\r\n"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:20)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 73,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+ var_Index_PWDAuthenticate +' 2F 02'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 1,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Manage Deactivatable features-Enable Manuf ",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 11 01 '+var_Index_ManageDeactivatable+' 2F 01'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "1000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:20)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 73,
+          "VariableName": "Echo1",
+          "Process": "",
+          "Min": "='11 01 '+ var_Index_ManageDeactivatable +' 2F 00'",
+          "Max": "",
+          "ErrorCode": "E-ED7EF"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 120,
+      "WaitInterval": 25,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 1,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Read Deactivatable info",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_Drivers.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "USB"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "subcommand",
+          "ArgumentValue": "HID++Request"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "DevID",
+          "ArgumentValue": "=var_gDevID3"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "command",
+          "ArgumentValue": "=var_HIDPP+' 10 01 ' + var_Index_ManageDeactivatable+ ' 0f'"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "timeout",
+          "ArgumentValue": "3000"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "format",
+          "ArgumentValue": "substr(1:20);substr(13:20)"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 12,
+          "VariableName": "Echo",
+          "Process": "",
+          "Min": "='11 01 '+var_Index_ManageDeactivatable+' 0F XX XX XX'",
+          "Max": "",
+          "ErrorCode": "E-20BCF"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": false,
+          "PisIndex": 0,
+          "VariableName": "DeactivatableBytes",
+          "Process": "=substr(var_Echo,13:20)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-8C19E"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 5,
+      "WaitInterval": 100,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Activate TDE command - Gothard",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}

@@ -1,0 +1,226 @@
+{
+  "$id": null,
+  "$type": "UTS2._0.TestGroup, UTS2.0",
+  "Name": "",
+  "Children": [
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "USB_6612=0V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_USB_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 0V;OUTP 1"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "BATT_6612=3.8V",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "CommandtoPPS",
+          "ArgumentValue": "VOLT 3.8V;OUTP 1"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "6612 Battery Curr set to MIN",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "3:Write"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "Nick Name",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NameOfIDN",
+          "ArgumentValue": "SENS:CURR:RANG MIN"
+        }
+      ],
+      "ResultVariables": [],
+      "FailRetryEnabled": false,
+      "RetryCount": 0,
+      "WaitInterval": 0,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    },
+    {
+      "$id": null,
+      "$type": "UTS2._0.TestItem, UTS2.0",
+      "Name": "Switch off Current",
+      "Command": "DLL",
+      "Subcommand": "Execute",
+      "CommandParameters": "UTS2_VISA_cs.dll",
+      "Arguments": [
+        {
+          "$id": null,
+          "ArgumentName": "Command",
+          "ArgumentValue": "5:QUERY"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NickName",
+          "ArgumentValue": "=var_BATT_6612"
+        },
+        {
+          "$id": null,
+          "ArgumentName": "NameofIDN",
+          "ArgumentValue": "MEAS:CURR?"
+        }
+      ],
+      "ResultVariables": [
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 59,
+          "VariableName": "I_SwitchOff_temp",
+          "Process": "",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-A6708"
+        },
+        {
+          "$id": null,
+          "IsShowingInPis": true,
+          "PisIndex": 60,
+          "VariableName": "#I_Poweroff",
+          "Process": "=numcal(var_I_SwitchOff_temp*1000)",
+          "Min": "",
+          "Max": "",
+          "ErrorCode": "E-FBCD5"
+        }
+      ],
+      "FailRetryEnabled": true,
+      "RetryCount": 20,
+      "WaitInterval": 50,
+      "FailJumpEnabled": false,
+      "FailJumpLabel": "",
+      "LoopEnabled": false,
+      "LoopLabel": "",
+      "LoopCount": 0,
+      "IfEnabled": false,
+      "IfJumpLabel": "",
+      "IfConditions": [],
+      "IfLogic": 0,
+      "GotoEnabled": false,
+      "GotoLabel": "",
+      "Label": "",
+      "Description": "",
+      "Status": 0,
+      "BackupStatus": 0,
+      "Parent": {
+        "$ref": null
+      },
+      "Section": 1
+    }
+  ],
+  "Label": "Switch Off Current",
+  "Description": "",
+  "Status": 0,
+  "BackupStatus": 0,
+  "Parent": null,
+  "Section": 1
+}
